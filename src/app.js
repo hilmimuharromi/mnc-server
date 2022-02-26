@@ -18,7 +18,6 @@ mongoose
       `Connected to Mongo! Database name: "${x.connections[0].name}"`
     );
     app.use(router)
-
   })
   .catch(err => {
     console.error("Error connecting to mongo", err);
