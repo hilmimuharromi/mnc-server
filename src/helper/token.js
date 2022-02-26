@@ -9,4 +9,4 @@ const verifyToken = (token) => {
     return jwt.verify(token, process.env.TOKEN_KEY)
 }
 
-module.exports ={ verifyToken, generateToken }
+module.exports = { verifyToken, generateToken }

@@ -28,7 +28,11 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true,
     }, 
-}, { timestamps: { createdAt: 'created_at' } });
+    balance: {
+        type: Number,
+        default: 0
+    }
+}, { timestamps: { createdAt: 'created_date', updatedAt: 'updated_date' } });
 
 userSchema.pre("save", function () {
     const hashedPin = hashPin(this.pin);
